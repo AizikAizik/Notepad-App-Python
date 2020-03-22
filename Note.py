@@ -21,6 +21,7 @@ def open_file():
 
 
 #functionality to save current file
+# has bugs when u click cancel when trying to save a file.. 
 def save_file():
     notepad_text = blank.get("1.0", "end-1c")
     file = asksaveasfilename(title = "Save", filetypes = [ ("text files", "*.txt") ])
@@ -38,7 +39,7 @@ filemenu.add_command(label = "open", command = open_file)
 filemenu.add_command(label = "Save", command = save_file)
 filemenu.add_command(label = "Exit", command = win.destroy)
 
-blank = Text(win, font = ( "Roboto", 14 ))
+blank = Text(win, font = ( "Roboto", 14 )) #font should be roboto and font size should be 14 
 blank.pack()
 
 win.mainloop()
